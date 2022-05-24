@@ -36,3 +36,18 @@ function sumNumbersRecursive(n: number) {
 console.log(sumNumbersRecursive(5)); // -> 15
 console.log(sumNumbersRecursive(7)); // -> 28
 ```
+
+## Exercices
+
+Sous le dossier `exercises`.
+
+* Palindrôme (fonction qui renvoie `true` si le mot passé en argument est un palindrôme) :
+
+    * éditer le fichier `palindrome.ts`
+    * pour tester : `yarn test src/palindrome.test.ts`
+
+
+* Nombre minimum dans un tableau :
+
+    * éditer le fichier `minNumber.ts`
+    * pour tester : `yarn test src/minNumber.test.ts`
