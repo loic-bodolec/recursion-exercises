@@ -37,17 +37,57 @@ console.log(sumNumbersRecursive(5)); // -> 15
 console.log(sumNumbersRecursive(7)); // -> 28
 ```
 
+Explications
+
+```
+sumNumbers(5) -> 15
+sumNumbers(6) -> 21
+
+21 = 6 + 5 + 4 + 3 + 2 + 1
+         -----------------
+                 |
+                 v
+
+                 sumNumbers(5)
+```
+
+Le résultat de `sumNumbers(6)` vaut 6 plus le résultat de `sumNumbers(5)`.
+
 ## Exercices
 
 Sous le dossier `exercises`.
 
-* Palindrôme (fonction qui renvoie `true` si le mot passé en argument est un palindrôme) :
+### Palindrôme
 
-    * éditer le fichier `palindrome.ts`
-    * pour tester : `yarn test src/palindrome.test.ts`
+> Fonction qui renvoie `true` si le mot passé en argument est un palindrôme :
+
+* éditer le fichier `exercises/palindrome.ts`
+* pour tester : `yarn test exercises/palindrome.test.ts`
 
 
-* Nombre minimum dans un tableau :
+### Nombre minimum
 
-    * éditer le fichier `minNumber.ts`
-    * pour tester : `yarn test src/minNumber.test.ts`
+> Fonction qui renvoie le nombre minimum dans un tableau :
+
+* éditer le fichier `exercises/minNumber.ts`
+* pour tester : `yarn test exercises/minNumber.test.ts`
+
+Indices
+
+```
+
+minNumber([3, 2, 1]) --> 1
+           v
+           3  vs minNumber([2, 1])
+                            v
+                            2  vs minNumber([1])
+```
+
+Pour trouver le nombre minimum dans `[3, 2, 1]`, on va comparer le 1er nombre (`3`) au minimum renvoyé par `minNumber([2, 1])`.
+
+### Factorielle
+
+> La factorielle de n est une fonction qui renvoie le produit de tous les nombres de 1 à n. Elle est notée n!. Factorielle de 4 ou 4! vaut 4 * 3 * 2 * 1, soit 24.
+
+* éditer le fichier `exercises/factorial.ts`
+* pour tester : `yarn test exercises/factorial.test.ts`
